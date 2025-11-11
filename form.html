@@ -1,11 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Sugira um destino - Atividade Somativa 1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/form.js" defer></script>
 </head>
 <body>
-    
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">
+                <img src="img/logo.svg" alt="Logo" class="logo">
+                <span class="site-title">Atividade Somativa 1 - Meu Diário de Viagens</span>
+            </a>
+            <nav class="main-nav" aria-label="menu principal">
+                <ul class="menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="about.html">Sobre</a></li>
+                    <li><a href="form.html">Sugira um destino</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-main container">
+        <h2>Envie sua sugestão de viagem</h2>
+        <form id="sugestaoForm" action="formAction.html" method="GET" novalidate>
+            <div class="form-row">
+                <label for="nome">Nome completo</label>
+                <input id="nome" name="nome" type="text" placeholder="Seu nome" required minlength="3" pattern="[A-Za-zÀ-ú\s]+">
+                <small class="hint">Somente letras e espaços. Mínimo 3 caracteres.</small>
+            </div>
+
+            <div class="form-row">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="seu@exemplo.com" required>
+            </div>
+
+            <div class="form-row">
+                <label for="destino">Destino sugerido</label>
+                <input id="destino" name="destino" type="text" placeholder="Cidade, país ou atração" required minlength="2">
+            </div>
+
+            <div class="form-row">
+                <label for="motivo">Por que escolheu este destino?</label>
+                <textarea id="motivo" name="motivo" rows="5" required minlength="10" placeholder="Conte por que gostaria deste destino"></textarea>
+            </div>
+
+            <div class="form-row">
+                <label for="data">Data prevista (opcional)</label>
+                <input id="data" name="data" type="date">
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn">Enviar sugestão</button>
+                <button type="reset" class="btn alt">Limpar</button>
+            </div>
+        </form>
+        <div id="form-errors" aria-live="polite" class="form-errors"></div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 - Hugo Souza</p>
+    </footer>
+
 </body>
 </html>
