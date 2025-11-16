@@ -14,4 +14,3 @@ Observações:
 - Todas as referências usam caminhos relativos (/css, /js, /img).
 - O formulário envia via método GET para 'formAction.html' e os dados são lidos com JavaScript.
 - Tema claro e menu fixo no topo conforme solicitado.
-- Imagens são SVGs simples para ilustração; substitua em /img por fotos reais se desejar.
