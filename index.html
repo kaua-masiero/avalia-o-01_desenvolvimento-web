@@ -1,23 +1,29 @@
-<!-- index.html - Página inicial do site -->
+<!--
+index.html
+Página inicial - Atividade Somativa Frontend
+Exibe boas-vindas, menu padrão e cards principais.
+Autor: Hugo Souza & Kauã Masiero
+-->
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Atividade Somativa 1 - Meu Diário de Viagens</title>
-  <!-- Importa folha de estilos externa -->
+  <!-- Importa o arquivo de estilos principal -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Cabeçalho com menu padrão, presente em todas as páginas -->
+  <!-- Menu topo fixo, presente em todas páginas -->
   <header class="site-header">
     <div class="header-inner">
-      <!-- Logo e título do site -->
+      <!-- Logo do site ao lado do nome -->
       <a class="brand" href="index.html">
-        <img src="img/logo.svg" alt="Logo" class="logo">
+        <img src="img/logo.jpg" alt="Logo viagens" class="logo">
         <span class="site-title">Atividade Somativa 1 - Meu Diário de Viagens</span>
       </a>
-      <!-- Navegação principal reutilizável -->
+      <!-- Navegação principal -->
       <nav class="main-nav" aria-label="menu principal">
         <ul class="menu">
           <li><a href="index.html">Início</a></li>
@@ -27,34 +33,37 @@
       </nav>
     </div>
   </header>
+
+  <!-- Conteúdo principal do site -->
   <main class="page-main">
-    <!-- Seção de boas vindas -->
+    <!-- Banner/hero com imagem e textos de boas-vindas -->
     <section class="hero">
-      <img src="img/banner.svg" alt="Paisagem ilustrativa" class="hero-img">
+      <img src="img/banner.jpg" alt="Paisagem ilustrativa" class="hero-img">
       <div class="hero-text">
         <h1>Bem-vindo ao Meu Diário de Viagens</h1>
-        <p>Um pequeno site demonstrativo criado como trabalho de FrontEnd puro <strong>HTML, CSS e JavaScript</strong>.</p>
+        <p>Um pequeno site demonstrativo criado como trabalho de Frontend puro <strong>HTML, CSS e JavaScript</strong>.</p>
         <p>Autor: <strong>Hugo Souza & Kauã Masiero</strong></p>
       </div>
     </section>
-    <!-- Cards e botões de navegação -->
+
+    <!-- Cards principais: sugestão e sobre -->
     <section class="cards">
       <article class="card">
         <h3>Explorar destinos</h3>
-        <p>Veja sugestões e compartilhe seus lugares preferidos com a nossa página de sugestões.</p>
+        <p>Veja sugestões e compartilhe seus lugares preferidos.</p>
         <p><a class="btn" href="form.html">Sugira um destino</a></p>
       </article>
       <article class="card">
         <h3>Sobre o projeto</h3>
-        <p>Este projeto demonstra estrutura de site com menu persistente, formulário com validação e recepção de dados via GET.</p>
+        <p>Este projeto demonstra estrutura de site com menu persistente, formulário validado e recepção de dados por GET.</p>
         <p><a class="btn" href="about.html">Saiba mais</a></p>
       </article>
     </section>
   </main>
+
+  <!-- Rodapé simples -->
   <footer class="site-footer">
-    <p>&copy; 2025 - Hugo Souza & Kauã Masiero</p>
+    <p>&copy; 2025 - Hugo Souza</p>
   </footer>
-  <!-- Importa script JS para funcionalidades gerais -->
-  <script src="js/script.js" defer></script>
 </body>
 </html>

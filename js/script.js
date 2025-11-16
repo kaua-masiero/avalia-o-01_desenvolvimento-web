@@ -1,27 +1,38 @@
-// script.js - Recebe os dados via GET e mostra na página de confirmação
+// script.js
+// Exibe na tela os dados enviados via GET do formulário
+// Garante tratamento seguro contra HTML injection
+
 (function(){
-  // Função de segurança para escapar caracteres HTML
+  // Função para escapar caracteres especiais e evitar risco de código malicioso
   function escapeHtml(str){
     if(!str) return '';
     return String(str).replace(/[&<>\"'`=\\/]/g, function(s){
-      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;",'/':'&#47;','=':'&#61;','`':'&#96;'}[s];
+      return {
+        '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;',
+        "'":"&#39;", '/':'&#47;', '=':'&#61;', '`':'&#96;'
+      }[s];
     });
   }
+
+  // Função principal que mostra os dados se existirem
   function showSubmitted(){
     const container = document.getElementById('dados');
     if(!container) return;
+
     const params = new URLSearchParams(window.location.search);
-    // Caso não haja dados enviados
     if([...params.keys()].length === 0){
+      // Nenhum dado, informa usuário
       container.innerHTML = '<p>Nenhum dado recebido. Volte para a página de envio.</p>';
       return;
     }
-    // Recupera e mostra cada campo submetido
+    // Pega cada campo recebido e exibe na tela
     const nome = escapeHtml(params.get('nome'));
     const email = escapeHtml(params.get('email'));
     const destino = escapeHtml(params.get('destino'));
     const motivo = escapeHtml(params.get('motivo'));
     const data = escapeHtml(params.get('data'));
+
+    // Monta card com os dados
     container.innerHTML = `
       <div class="card">
         <p><strong>Nome:</strong> ${nome || ' *não informado*'}</p>
@@ -32,5 +43,7 @@
       </div>
     `;
   }
+
+  // Quando a página carregar, executa a função
   window.addEventListener('DOMContentLoaded', showSubmitted);
 })();
