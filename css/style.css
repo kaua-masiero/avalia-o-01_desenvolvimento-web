@@ -1,86 +1,67 @@
-/* style.css - Tema claro, menu fixo no topo */
-:root{
-  --primary:#0b63d1;
-  --dark:#073b7a;
-  --muted:#6b7280;
-  --bg:#f5f9ff;
-  --card:#ffffff;
-  --radius:12px;
-  --max-width:1000px;
-  --gap:18px;
-  --accent:#0b63d1;
+:root {
+  --primary: #0b63d1;      /* Cor principal do site */
+  --dark: #073b7a;         /* Tom escuro usado no menu */
+  --muted: #6b7280;        /* Cor de textos secundários */
+  --bg: #f5f9ff;           /* Cor de fundo */
+  --card: #ffffff;         /* Cor de fundo dos cards */
+  --radius: 12px;          /* Raio para bordas arredondadas */
+  --max-width: 1000px;     /* Largura máxima para containers */
+  --gap: 18px;             /* Espaçamento padrão */
+  --accent: #0b63d1;       /* Detalhes em azul destaque */
 }
 
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background:var(--bg);
-  color:#0f1724;
-  line-height:1.5;
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: #0f1724;
+  line-height: 1.5;
 }
 
-/* header fixed */
-.site-header{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  background: linear-gradient(90deg,var(--primary),var(--dark));
-  color:#fff;
-  z-index:1000;
-  box-shadow:0 4px 12px rgba(11,99,209,0.18);
+/* MENU PADRÃO FIXO EM TODAS AS PÁGINAS */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--dark));
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(11,99,209,0.18);
+  z-index: 1000;
 }
-.header-inner{
-  max-width:var(--max-width);
-  margin:0 auto;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:14px 18px;
-  gap:12px;
+
+/* Layout flex para cabeçalho e menu */
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  gap: 12px;
 }
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
-.logo{width:44px;height:44px}
-.site-title{font-weight:700;font-size:1rem}
 
-.main-nav .menu{list-style:none;margin:0;padding:0;display:flex;gap:14px}
-.main-nav .menu a{color:#fff;text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600}
-.main-nav .menu a:hover{background:rgba(255,255,255,0.12)}
-
-/* push content below header */
-.page-main{padding-top:110px;max-width:var(--max-width);margin:0 auto;padding-left:18px;padding-right:18px;}
-
-.hero{display:flex;flex-wrap:wrap;gap:18px;align-items:center;background:transparent;margin-bottom:18px}
-.hero-img{flex:1 1 360px;max-width:540px;border-radius:12px;box-shadow:0 8px 20px rgba(12,40,80,0.08)}
-.hero-text{flex:1 1 300px;min-width:260px}
-h1{margin-top:0}
-
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-bottom:28px}
-.card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(12,40,80,0.04)}
-
-.container{max-width:900px;margin:0 auto}
-
-.form-row{margin-bottom:12px;display:flex;flex-direction:column;align-items:flex-start}
-label{font-weight:600;margin-bottom:6px}
-input[type="text"], input[type="email"], input[type="date"], textarea{
-  width:100%;padding:10px;border-radius:8px;border:1px solid #d6e1f7;background:#fff;
-  font-size:0.95rem;
+.main-nav .menu {
+  list-style: none;
+  display: flex;
+  gap: 14px;
 }
-textarea{resize:vertical;min-height:90px}
 
-.form-actions{display:flex;gap:12px;align-items:center;margin-top:8px}
-.btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;border:none;cursor:pointer;font-weight:700}
-.btn.alt{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+.main-nav .menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+}
 
-.form-errors{color:#b00020;margin-top:10px;font-weight:600}
+.main-nav .menu a:hover {
+  background: rgba(255,255,255,0.12);
+}
 
-.site-footer{margin-top:36px;padding:18px;text-align:center;background:transparent;color:var(--muted)}
-
-/* responsive tweaks */
-@media (max-width:640px){
-  .header-inner{padding:12px}
-  .main-nav .menu{gap:8px;font-size:0.95rem}
-  .hero{flex-direction:column}
-  .page-main{padding-top:140px}
+/* Responsividade para dispositivos menores */
+@media (max-width: 640px) {
+  .header-inner { padding: 12px; }
+  .main-nav .menu { gap: 8px; font-size: 0.95rem; }
+  .hero { flex-direction: column; }
+  .page-main { padding-top: 140px; }
 }

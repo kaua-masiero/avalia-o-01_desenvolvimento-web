@@ -1,57 +1,60 @@
+<!-- index.html - Página inicial do site -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Atividade Somativa 1 - Meu Diário de Viagens</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atividade Somativa 1 - Meu Diário de Viagens</title>
+  <!-- Importa folha de estilos externa -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="header-inner">
-            <a class="brand" href="index.html">
-                <img src="img/logo.svg" alt="Logo" class="logo">
-                <span class="site-title">Atividade Somativa 1 - Meu Diário de Viagens</span>
-            </a>
-            <nav class="main-nav" aria-label="menu principal">
-                <ul class="menu">
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="about.html">Sobre</a></li>
-                    <li><a href="form.html">Sugira um destino</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main class="page-main">
-        <section class="hero">
-            <img src="img/banner.svg" alt="Paisagem ilustrativa" class="hero-img">
-            <div class="hero-text">
-                <h1>Bem-vindo ao Meu Diário de Viagens</h1>
-                <p>Um pequeno site demonstrativo criado como trabalho de Front‑End puro — <strong>HTML, CSS e JavaScript</strong>.</p>
-                <p>Autor: <strong>Hugo Souza</strong></p>
-            </div>
-        </section>
-
-        <section class="cards">
-            <article class="card">
-                <h3>Explorar destinos</h3>
-                <p>Veja sugestões e compartilhe seus lugares preferidos com a nossa página de sugestões.</p>
-                <p><a class="btn" href="form.html">Sugira um destino</a></p>
-            </article>
-
-            <article class="card">
-                <h3>Sobre o projeto</h3>
-                <p>Este projeto demonstra estrutura de site com menu persistente, formulário com validação e recepção de dados via GET.</p>
-                <p><a class="btn" href="about.html">Saiba mais</a></p>
-            </article>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <p>&copy; 2025 - Hugo Souza</p>
-    </footer>
-
-    <script src="js/script.js" defer></script>
+  <!-- Cabeçalho com menu padrão, presente em todas as páginas -->
+  <header class="site-header">
+    <div class="header-inner">
+      <!-- Logo e título do site -->
+      <a class="brand" href="index.html">
+        <img src="img/logo.svg" alt="Logo" class="logo">
+        <span class="site-title">Atividade Somativa 1 - Meu Diário de Viagens</span>
+      </a>
+      <!-- Navegação principal reutilizável -->
+      <nav class="main-nav" aria-label="menu principal">
+        <ul class="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="about.html">Sobre</a></li>
+          <li><a href="form.html">Sugira um destino</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="page-main">
+    <!-- Seção de boas vindas -->
+    <section class="hero">
+      <img src="img/banner.svg" alt="Paisagem ilustrativa" class="hero-img">
+      <div class="hero-text">
+        <h1>Bem-vindo ao Meu Diário de Viagens</h1>
+        <p>Um pequeno site demonstrativo criado como trabalho de FrontEnd puro <strong>HTML, CSS e JavaScript</strong>.</p>
+        <p>Autor: <strong>Hugo Souza</strong></p>
+      </div>
+    </section>
+    <!-- Cards e botões de navegação -->
+    <section class="cards">
+      <article class="card">
+        <h3>Explorar destinos</h3>
+        <p>Veja sugestões e compartilhe seus lugares preferidos com a nossa página de sugestões.</p>
+        <p><a class="btn" href="form.html">Sugira um destino</a></p>
+      </article>
+      <article class="card">
+        <h3>Sobre o projeto</h3>
+        <p>Este projeto demonstra estrutura de site com menu persistente, formulário com validação e recepção de dados via GET.</p>
+        <p><a class="btn" href="about.html">Saiba mais</a></p>
+      </article>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>&copy; 2025 - Hugo Souza</p>
+  </footer>
+  <!-- Importa script JS para funcionalidades gerais -->
+  <script src="js/script.js" defer></script>
 </body>
 </html>

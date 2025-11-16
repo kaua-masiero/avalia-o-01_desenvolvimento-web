@@ -1,5 +1,5 @@
 Atividade Somativa 1 - Meu Diário de Viagens
-Autor: Hugo Souza
+Autor: Hugo Souza e Kauã Masiero
 Conteúdo: site estático (HTML/CSS/JS) com menu fixo no topo, formulário com validação e página que
 recebe dados via GET e trata com JavaScript.
 
