@@ -20,7 +20,7 @@ Autor: Hugo Souza & Kauã Masiero
     <div class="header-inner">
       <!-- Logo do site ao lado do nome -->
       <a class="brand" href="index.html">
-        <img src="img/logo.svg" alt="Logo viagens" class="logo">
+        <img src="img/logo.jpg" alt="Logo viagens" class="logo">
         <span class="site-title">Atividade Somativa 1 - Meu Diário de Viagens</span>
       </a>
       <!-- Navegação principal -->
@@ -36,34 +36,38 @@ Autor: Hugo Souza & Kauã Masiero
 
   <!-- Conteúdo principal do site -->
   <main class="page-main">
-    <!-- Banner/hero com imagem e textos de boas-vindas -->
-    <section class="hero">
-      <img src="img/banner.svg" alt="Paisagem ilustrativa" class="hero-img">
-      <div class="hero-text">
-        <h1>Bem-vindo ao Meu Diário de Viagens</h1>
-        <p>Um pequeno site demonstrativo criado como trabalho de Frontend puro <strong>HTML, CSS e JavaScript</strong>.</p>
-        <p>Autores: <strong>Hugo Souza & Kauã Masiero</strong></p>
+    <!-- Hero/banner e boas-vindas visual alinhado responsivo -->
+    <section class="hero" style="display:flex;align-items:center;gap:42px;margin-bottom:36px;flex-wrap:wrap;">
+      <!-- Imagem do banner à esquerda -->
+      <img src="img/banner.jpg" alt="Paisagem ilustrativa" class="hero-img" style="width:360px;max-width:96vw;border-radius:18px;box-shadow:0 8px 32px rgba(12,40,80,0.12);background:#e4eaff;">
+      <!-- Texto à direita do banner -->
+      <div class="hero-text" style="flex:1 1 320px;min-width:260px;">
+        <h1 style="font-size:2.5rem;font-weight:700;margin-top:0;margin-bottom:18px;">
+          Bem-vindo ao Meu Diário de Viagens
+        </h1>
+        <p>Um pequeno site demonstrativo criado como trabalho de Front-End puro <strong>HTML, CSS e JavaScript</strong>.</p>
+        <p>Autor: <strong>Hugo Souza &amp; Kauã Masiero</strong></p>
       </div>
     </section>
 
-    <!-- Cards principais: sugestão e sobre -->
-    <section class="cards">
-      <article class="card">
-        <h3>Explorar destinos</h3>
-        <p>Veja sugestões e compartilhe seus lugares preferidos.</p>
-        <p><a class="btn" href="form.html">Sugira um destino</a></p>
+    <!-- Cards principais: sugestão e sobre, lado-a-lado no desktop -->
+    <section class="cards" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;margin-bottom:28px;">
+      <article class="card" style="background:#fff;padding:28px;border-radius:18px;box-shadow:0 6px 20px rgba(12,40,80,0.10);display:flex;flex-direction:column;">
+        <h3 style="margin-bottom:8px;">Explorar destinos</h3>
+        <p>Veja sugestões e compartilhe seus lugares preferidos com a nossa página de sugestões.</p>
+        <p><a class="btn" href="form.html" style="padding:12px 22px;border-radius:10px;background:#0b63d1;color:#fff;text-decoration:none;font-weight:700;">Sugira um destino</a></p>
       </article>
-      <article class="card">
-        <h3>Sobre o projeto</h3>
-        <p>Este projeto demonstra estrutura de site com menu persistente, formulário validado e recepção de dados por GET.</p>
-        <p><a class="btn" href="about.html">Saiba mais</a></p>
+      <article class="card" style="background:#fff;padding:28px;border-radius:18px;box-shadow:0 6px 20px rgba(12,40,80,0.10);display:flex;flex-direction:column;">
+        <h3 style="margin-bottom:8px;">Sobre o projeto</h3>
+        <p>Este projeto demonstra estrutura de site com menu persistente, formulário com validação e recepção de dados via GET.</p>
+        <p><a class="btn" href="about.html" style="padding:12px 22px;border-radius:10px;background:#0b63d1;color:#fff;text-decoration:none;font-weight:700;">Saiba mais</a></p>
       </article>
     </section>
   </main>
 
   <!-- Rodapé simples -->
   <footer class="site-footer">
-    <p>&copy; 2025 - Hugo Souza & Kauã Masiero</p>
+    <p>&copy; 2025 - Hugo Souza &amp; Kauã Masiero</p>
   </footer>
 </body>
 </html>
